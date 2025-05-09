@@ -8,74 +8,121 @@
     body {
       margin: 0;
       font-family: sans-serif;
+      display: flex;
+      flex-direction: row;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .lyrics-container {
-      flex: 1;
-      display: flex;
-    }
-
-    .half {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .side-button {
+      width: 5%;
+      height: 100%;
       cursor: pointer;
-      border: none;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
       transition: background 0.2s;
     }
 
+    .side-button:hover {
+      background-color: #f0f0f0;
+    }
+
     .left {
-      background: #f0f0f0;
+      border-right: none;
     }
 
     .right {
-      background: #e0e0e0;
+      border-left: none;
     }
 
-    .lyrics-display {
-      white-space: pre-wrap;
-      padding: 1rem;
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
       text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
     }
 
     #lyrics {
-      margin: 1rem auto;
+      white-space: pre-wrap;
       max-width: 600px;
-      text-align: center;
     }
 
     a {
-      text-align: center;
-      display: block;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <h1>5 Taara</h1>
+  <div class="side-button left" onclick="showLyrics('punjabi')"></div>
 
-  <div class="lyrics-container">
-    <div class="half left" onclick="showLyrics('punjabi')"></div>
-    <div class="half right" onclick="showLyrics('romanised')"></div>
+  <div class="content">
+    <h1>5 Taara</h1>
+    <div id="lyrics">
+      ਠੇਕੇ ਉੱਤੇ 
+      
+      ਪੈਗ ਪੈਗ ਕਰਦੇ ਨੇ ਬੋਤਲ ਮੈਂ ਚਾੜੀ
+      ਤੂ ਕੀ ਸਾਨੂੰ ਛੱਡਣਾ ਨੀ ਅਸੀ ਛੱਡੀ ਯਾਰੀ
+      ਤੂ ਕੀ ਸਾਨੂੰ ਛੱਡਣਾ ਨੀ ਅਸੀ ਛੱਡੀ ਯਾਰੀ
+      ਰਾਤੀ ਪੀਕੇ ਦਾਰੂ ਨਾਲ ਯਾਰਾਂ ਪਾਏ ਨੀ ਖਿਲਾਰੇ
+      ਤੈਨੂੰ ਦਿਲ ਵਿਚੋਂ ਕੱਡਕੇ ਮੈਂ ਸੀਨਾ ਠਾਰਿਆ
+      ਨੀ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਫੀਲਿੰਗਾਂ ਚ ਸੁਣ ਲਏ ਰੋਮੈਂਟਿਕ ਸੌਂਗ ਨੀ
+      ਤੇਰੇ ਨਾਲ ਯਾਰੀ ਸੋਚੀ ਬੈਠਾ ਲਿਵ ਲੌਂਗ ਨੀ
+      ਪਿਆਰ ਦਾ ਬੁਖਾਰ ਤੈਨੂੰ ਓਨਾ ਚਿਰ ਚੜਿਆ
+      ਜਿਨਾ ਚਿਰ ਜੱਟ ਦੀ ਸੀ ਜੇਬ ਸਟਰੌਂਗ ਨੀ
+      ਹਾਏ ਜੇਬ ਸਟਰੌਂਗ ਨੀ
+      
+      ਤੇਰੇ ਨਾਲ ਸੀ ਖਿਚਾਈਆਂ ਫੇਸਬੁੱਕ ਤੇ ਮੈਂ ਪਾਈਆਂ
+      ਤੇਰੇ ਨਾਲ ਖਿਚਵਾਈਆਂ ਫੇਸਬੁੱਕ ਉੱਤੇ ਪਾਈਆਂ
+      ਤੇਰੀ ਕੱਲੀ-ਕੱਲੀ ਫੋਟੋ ਤੇ ਡਿਲੀਟ ਮਾਰਿਆ
+      ਨੀ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਚੱਕਵੇਂ ਬ੍ਰੈਂਡ ਜਿਹੜੇ ਪਾਉਂਦੀ ਘੈਂਟ-ਘੈਂਟ ਨੀ
+      ਗਿਫਟਾਂ ਚ ਦੇਕੇ ਵੱਜਾ ਯਾਰਾਂ ਦਾ ਹੀ ਬੈਂਡ ਨੀ
+      ਸਾਨੂੰ ਰਿਫਯੂਸ ਕੀਤਾ, ਚੂਸ ਤੂੰ ਵਲੈਤੀਆ
+      ਖੂਫੀਆ ਰਿਪੋਰਟਾਂ ਨੀ ਤੂੰ ਜਾਣਾ ਇੰਗਲੈਂਡ
+      ਹਾਏ ਨੀ ਜਾਣਾ ਇੰਗਲੈਂਡ ਨੀ
+      
+      ਝੂਠੇ ਕਰ-ਕਰ ਹੱਗ ਚੱਲੀ ਜੱਟ ਨੂ ਤੂੰ ਠੱਗ
+      ਝੂਠੇ ਕਰ-ਕਰ ਹੱਗ ਚੱਲੀ ਰਣਵੀਰ ਨੂ ਤੂੰ ਠੱਗ
+      ਮੇਰਾ ਕਰਕੇ ਹਵਾਈ ਪਾਰੀਆਂ ਹੀ ਸਰਿਆ
+      ਨੀ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
+      ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
+      
+      ਸਾਰਾ ਗੁੱਸਾ
+    </div>
+    <a href="../index.html">← Back to song list</a>
   </div>
 
-  <div id="lyrics" class="lyrics-display">
-    ਹੋ ਜੱਟ ਦੀ ਪਸੰਦ ਆ ਗਈ 5 ਤਾਰਾ ਹੋਟਲ 'ਚ  
-    ਸੂਟ ਤੇਰਾ ਨੀ ਬਲੈਕ ਓ ਲੈਕੇ ਆਈ ਮੁਟਿਆਰ ਨੀ  
-    ਚੁੰਨੀ ਤੇ ਲੈਸ ਲਾ ਲੈ ਤੈਨੂੰ ਲੱਗੂ ਐਥੋਂ ਵਧੀਆ  
-    ਹੋਰ ਕੁੜੀ ਨੀ ਲੱਭੂ ਕਦੇ ਵੀ ਏਨੀ ਸੋਹਣੀ ਯਾਰ ਨੀ
-  </div>
-
-  <p><a href="../index.html">← Back to song list</a></p>
+  <div class="side-button right" onclick="showLyrics('romanised')"></div>
 
   <script>
     const punjabiLyrics = `ਠੇਕੇ ਉੱਤੇ 
