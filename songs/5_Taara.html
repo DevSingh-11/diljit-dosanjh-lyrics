@@ -5,39 +5,80 @@
   <title>5 Taara - Lyrics</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    .lyrics-version {
-      display: none;
-      white-space: pre-wrap;
-      margin-top: 1em;
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    .active {
-      display: block;
-    }
-
-    .button-group {
+    h1 {
       text-align: center;
-      margin: 1em 0;
+      margin-top: 1rem;
     }
 
-    .button-group button {
-      margin: 0 5px;
-      padding: 0.5em 1em;
-      font-size: 1em;
+    .lyrics-container {
+      flex: 1;
+      display: flex;
+    }
+
+    .half {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+
+    .left {
+      background: #f0f0f0;
+    }
+
+    .right {
+      background: #e0e0e0;
+    }
+
+    .lyrics-display {
+      white-space: pre-wrap;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #lyrics {
+      margin: 1rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    a {
+      text-align: center;
+      display: block;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
   <h1>5 Taara</h1>
 
-  <div class="button-group">
-    <button onclick="showLyrics('punjabi')">Punjabi</button>
-    <button onclick="showLyrics('romanised')">Romanised</button>
+  <div class="lyrics-container">
+    <div class="half left" onclick="showLyrics('punjabi')"></div>
+    <div class="half right" onclick="showLyrics('romanised')"></div>
   </div>
 
-  <div id="punjabi" class="lyrics-version active">
-ਠੇਕੇ ਉੱਤੇ 
+  <div id="lyrics" class="lyrics-display">
+    ਹੋ ਜੱਟ ਦੀ ਪਸੰਦ ਆ ਗਈ 5 ਤਾਰਾ ਹੋਟਲ 'ਚ  
+    ਸੂਟ ਤੇਰਾ ਨੀ ਬਲੈਕ ਓ ਲੈਕੇ ਆਈ ਮੁਟਿਆਰ ਨੀ  
+    ਚੁੰਨੀ ਤੇ ਲੈਸ ਲਾ ਲੈ ਤੈਨੂੰ ਲੱਗੂ ਐਥੋਂ ਵਧੀਆ  
+    ਹੋਰ ਕੁੜੀ ਨੀ ਲੱਭੂ ਕਦੇ ਵੀ ਏਨੀ ਸੋਹਣੀ ਯਾਰ ਨੀ
+  </div>
+
+  <p><a href="../index.html">← Back to song list</a></p>
+
+  <script>
+    const punjabiLyrics = `ਠੇਕੇ ਉੱਤੇ 
 
 ਪੈਗ ਪੈਗ ਕਰਦੇ ਨੇ ਬੋਤਲ ਮੈਂ ਚਾੜੀ
 ਤੂ ਕੀ ਸਾਨੂੰ ਛੱਡਣਾ ਨੀ ਅਸੀ ਛੱਡੀ ਯਾਰੀ
@@ -89,11 +130,9 @@
 ਪੰਜ ਪੰਜ ਤਾਰਾ ਠੇਕੇ ਉੱਤੇ ਬਹਿਕੇ ਤਾਰਿਆ
 ਮੈਂ ਤੇਰਾ ਸਾਰਾ ਗੁੱਸਾ
 
-ਸਾਰਾ ਗੁੱਸਾ
-  </div>
+ਸਾਰਾ ਗੁੱਸਾ`;
 
-  <div id="romanised" class="lyrics-version">
-Theke utte
+    const romanisedLyrics = `Theke utte
 
 Peg peg karde ne botal main chaadi
 Tu ki saanu chhadna ni assi chhadi yaari
@@ -145,17 +184,10 @@ Main tera saara gussa
 Panj taara theke utte behke taareya
 Main tera saara gussa
 
-Saara gussa
-  </div>
+Saara gussa`;
 
-  <p><a href="../index.html">← Back to song list</a></p>
-
-  <script>
     function showLyrics(version) {
-      document.querySelectorAll('.lyrics-version').forEach(div => {
-        div.classList.remove('active');
-      });
-      document.getElementById(version).classList.add('active');
+      document.getElementById('lyrics').textContent = version === 'punjabi' ? punjabiLyrics : romanisedLyrics;
     }
   </script>
 </body>
