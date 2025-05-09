@@ -7,20 +7,22 @@ body {
   color: #222;
 }
 
+/* Make the title big and centered */
 h1 {
+  font-size: 3rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li a {
+/* Make the song links bigger */
+.song-list a {
+  font-size: 1.5rem;
+  display: block;
+  margin: 1rem 0;
   text-decoration: none;
-  color: #0066cc;
+  color: #333;
 }
 
-li a:hover {
-  text-decoration: underline;
+.song-list a:hover {
+  color: #0077cc;
 }
