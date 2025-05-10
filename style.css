@@ -7,16 +7,16 @@ body {
   color: #222;
 }
 
-/* Make the title big and centered */
+/* Page title */
 h1 {
-  font-size: 3rem;
+  font-size: 3rem;       /* Larger title */
   text-align: center;
   margin-top: 2rem;
 }
 
-/* Make the song links bigger */
+/* Song links list */
 .song-list a {
-  font-size: 1.5rem;
+  font-size: 2rem;        /* Larger song names */
   display: block;
   margin: 1rem 0;
   text-decoration: none;
@@ -25,4 +25,13 @@ h1 {
 
 .song-list a:hover {
   color: #0077cc;
+}
+
+/* Lyrics styling */
+#lyrics {
+  text-align: left;
+  white-space: pre-wrap;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
