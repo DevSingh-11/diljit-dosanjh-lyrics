@@ -8,14 +8,14 @@ body {
 
 /* Page title */
 h1 {
-  font-size: 5rem; /* Increased font size */
+  font-size: 8rem; /* Even bigger title */
   text-align: center;
   margin-top: 2rem;
 }
 
 /* Song list links */
 .song-list a {
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 5rem; /* Much larger font size for song names */
   display: block;
   margin: 1rem 0;
   text-decoration: none;
@@ -26,12 +26,12 @@ h1 {
   color: #0077cc;
 }
 
-/* Lyrics: start from the left edge */
+/* Lyrics: no changes made */
 #lyrics {
   text-align: left;
   white-space: pre-wrap;
-  font-size: 1.6rem; /* Increased font size */
-  line-height: 1.8; /* Adjusted line height for better readability */
+  font-size: 1.6rem;
+  line-height: 1.8;
   margin-top: 2rem;
   margin-left: 0;
   margin-right: 0;
