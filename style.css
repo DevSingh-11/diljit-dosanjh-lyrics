@@ -15,7 +15,7 @@ h1 {
 
 /* Song list links */
 .song-list a {
-  font-size: 6rem; /* Increased font size for song names */
+  font-size: 7rem; /* Increased font size for song names */
   display: block;
   margin: 1rem 0;
   text-decoration: none;
