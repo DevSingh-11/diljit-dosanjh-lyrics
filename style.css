@@ -1,22 +1,21 @@
 body {
   font-family: sans-serif;
-  max-width: 700px;
-  margin: 2em auto;
-  padding: 1em;
+  margin: 0;
+  padding: 2em;
   background: #f9f9f9;
   color: #222;
 }
 
 /* Page title */
 h1 {
-  font-size: 3rem;       /* Larger title */
+  font-size: 3rem;
   text-align: center;
   margin-top: 2rem;
 }
 
-/* Song links list */
+/* Song list links */
 .song-list a {
-  font-size: 2rem;        /* Larger song names */
+  font-size: 2rem;
   display: block;
   margin: 1rem 0;
   text-decoration: none;
@@ -27,11 +26,14 @@ h1 {
   color: #0077cc;
 }
 
-/* Lyrics styling */
+/* Lyrics: start from the left edge like a book */
 #lyrics {
   text-align: left;
   white-space: pre-wrap;
-  margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
 }
