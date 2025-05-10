@@ -10,72 +10,61 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      width: 100vw;
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-button {
-      width: 10vw;
-      height: 100vh;
-      cursor: pointer;
-      border: 1px solid #ccc;
-      transition: background 0.2s;
-      flex-shrink: 0;
-    }
-
-    .side-button:hover {
-      background-color: #f0f0f0;
-    }
-
-    .left {
-      border-right: none;
-    }
-
-    .right {
-      border-left: none;
-    }
-
-    .content {
-      width: 80vw;
-      height: 100vh;
-      overflow-y: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 2rem;
-      text-align: center;
     }
 
     h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .button-group {
       margin-bottom: 2rem;
     }
 
+    .button-group button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      transition: background 0.2s;
+    }
+
+    .button-group button:hover {
+      background-color: #eee;
+    }
+
     #lyrics {
+      max-width: 600px;
+      text-align: center;
       white-space: pre-wrap;
-      max-width: 90%;
     }
 
     a {
-      margin-top: 2rem;
       display: inline-block;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="side-button left" onclick="showLyrics('punjabi')"></div>
+  <h1>5 Taara</h1>
 
-  <div class="content">
-    <h1>5 Taara</h1>
-    <div id="lyrics">Theke utte
+  <div class="button-group">
+    <button onclick="showLyrics('punjabi')">Punjabi</button>
+    <button onclick="showLyrics('romanised')">Romanised</button>
+  </div>
+
+  <div id="lyrics">Theke utte
 
 
 Peg peg karde ne botal main chaadi
@@ -137,10 +126,8 @@ Main tera saara gussa
 
 
 Saara gussa</div>
-    <a href="../index.html">← Back to song list</a>
-  </div>
 
-  <div class="side-button right" onclick="showLyrics('romanised')"></div>
+  <a href="../index.html">← Back to song list</a>
 
   <script>
     const punjabiLyrics = `ਠੇਕੇ ਉੱਤੇ 
@@ -270,12 +257,9 @@ Main tera saara gussa
 Saara gussa`;
 
     function showLyrics(version) {
-      document.getElementById('lyrics').textContent = version === 'punjabi' ? punjabiLyrics : romanisedLyrics;
+      document.getElementById('lyrics').textContent =
+        version === 'punjabi' ? punjabiLyrics : romanisedLyrics;
     }
   </script>
 </body>
 </html>
-
-
-
-
