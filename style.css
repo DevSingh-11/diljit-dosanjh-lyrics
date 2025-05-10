@@ -8,14 +8,14 @@ body {
 
 /* Page title */
 h1 {
-  font-size: 8rem; /* Even bigger title */
+  font-size: 8rem; /* Title size stays the same */
   text-align: center;
   margin-top: 2rem;
 }
 
 /* Song list links */
 .song-list a {
-  font-size: 6rem; /* Much larger font size for song names */
+  font-size: 6rem; /* Increased font size for song names */
   display: block;
   margin: 1rem 0;
   text-decoration: none;
