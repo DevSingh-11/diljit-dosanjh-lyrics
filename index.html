@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Enables smooth scrolling */
     }
 
     body {
@@ -30,10 +30,10 @@
       border-radius: 12px;
     }
 
-    /* Sticky A–Z bar (just below banner) */
+    /* Sticky A–Z bar below banner */
     .az-bar {
       position: sticky;
-      top: 112px; /* 72px banner + 40px padding allowance */
+      top: 491px; /* Match height of banner image */
       background: #f9f9f9;
       z-index: 999;
       padding: 0.5em 0;
@@ -69,8 +69,9 @@
       margin: 0.3em 0;
     }
 
+    /* Extra spacing after last song in each section */
     .song-section a:last-of-type {
-      margin-bottom: 3em; /* Adjustable space after last song */
+      margin-bottom: 3em;
     }
   </style>
 </head>
