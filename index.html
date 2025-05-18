@@ -33,9 +33,9 @@
     /* Sticky A–Z bar */
     .az-bar {
       position: sticky;
-      top: 112px; /* Slightly below the banner height */
+      top: 72px; /* Adjusted to be below the banner (banner height approx 72px with padding) */
       background: #f9f9f9;
-      z-index: 999;
+      z-index: 1000; /* Same z-index as banner so it stays above content */
       padding: 0.5em 0;
       text-align: center;
       font-size: 1.5rem;
@@ -67,6 +67,11 @@
     .song-section a {
       display: block;
       margin: 0.3em 0;
+    }
+
+    /* Add extra bottom margin to last song link in each section */
+    .song-section a:last-of-type {
+      margin-bottom: 3em; /* Larger space after last song */
     }
   </style>
 </head>
