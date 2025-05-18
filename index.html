@@ -5,10 +5,7 @@
   <title>Diljit Dosanjh Songs</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* html {
-      scroll-behavior: smooth;
-    } */
-
+    /* Removed smooth scrolling */
     body {
       margin: 0;
       font-family: sans-serif;
@@ -33,7 +30,7 @@
     /* Sticky A–Z bar */
     .az-bar {
       position: sticky;
-      top: 112px; /* Slightly below the banner height */
+      top: 112px;
       background: #f9f9f9;
       z-index: 999;
       padding: 0.5em 0;
@@ -57,11 +54,9 @@
       margin-top: 2em;
     }
 
-    .song-section h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5em;
+    .section-divider {
       border-bottom: 2px solid #ddd;
-      padding-bottom: 0.2em;
+      margin: 2em 0 1em;
     }
 
     .song-section a {
@@ -74,8 +69,8 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      width: 100px;
-      height: 100px;
+      width: 85px;
+      height: 85px;
       background: transparent;
       border: none;
       cursor: pointer;
@@ -134,22 +129,25 @@
   <div class="song-list">
 
     <div class="song-section" id="num">
-      <h2>#</h2>
+      <div class="section-divider"></div>
       <a href="songs/5_Taara.html">5 Taara</a>
     </div>
 
     <div class="song-section" id="A">
+      <div class="section-divider"></div>
       <a href="songs/Aar_Nanak_Paar_Nanak.html">Aar Nanak Paar Nanak</a>
       <a href="songs/Akh_Laal_Jatt_Di.html">Akh Laal Jatt Di</a>
       <a href="songs/Amiri.html">Amiri</a>
     </div>
 
     <div class="song-section" id="B">
+      <div class="section-divider"></div>
       <a href="songs/Bad_Habits.html">Bad Habits</a>
       <a href="songs/Born_To_Shine.html">Born To Shine</a>
     </div>
 
     <div class="song-section" id="C">
+      <div class="section-divider"></div>
       <a href="songs/Case.html">Case</a>
       <a href="songs/Choli_Ke_Peeche.html">Choli Ke Peeche</a>
       <a href="songs/Clash.html">Clash</a>
@@ -157,23 +155,28 @@
     </div>
 
     <div class="song-section" id="D">
+      <div class="section-divider"></div>
       <a href="songs/Daytona.html">Daytona</a>
       <a href="songs/Do_You_Know.html">Do You Know</a>
     </div>
 
     <div class="song-section" id="E">
+      <div class="section-divider"></div>
       <a href="songs/E.html">E</a>
     </div>
 
     <div class="song-section" id="F">
+      <div class="section-divider"></div>
       <a href="songs/F.html">F</a>
     </div>
 
     <div class="song-section" id="G">
+      <div class="section-divider"></div>
       <a href="songs/G.html">G</a>
     </div>
 
     <div class="song-section" id="H">
+      <div class="section-divider"></div>
       <a href="songs/H.html">H</a>
     </div>
 
@@ -187,7 +190,7 @@
   <script>
     const scrollBtn = document.getElementById('scrollTopBtn');
     scrollBtn.addEventListener('click', () => {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'auto' });
     });
   </script>
 
