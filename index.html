@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Diljit Dosanjh Songs</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     html {
       scroll-behavior: smooth; /* Enables smooth scrolling */
@@ -14,14 +14,17 @@
       font-family: sans-serif;
     }
 
-    /* Sticky Spotify banner */
+    /* Fixed Spotify banner */
     .sticky-banner {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       background: white;
-      z-index: 1000;
+      z-index: 1100;
       padding: 1em;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
 
     .sticky-banner img {
@@ -30,12 +33,14 @@
       border-radius: 12px;
     }
 
-    /* Sticky A–Z bar */
+    /* Fixed A–Z bar below the banner */
     .az-bar {
-      position: sticky;
-      top: 72px; /* Adjusted to be below the banner (banner height approx 72px with padding) */
+      position: fixed;
+      top: 72px; /* Adjust this if banner height changes */
+      left: 0;
+      right: 0;
       background: #f9f9f9;
-      z-index: 1000; /* Same z-index as banner so it stays above content */
+      z-index: 1099; /* Just below banner */
       padding: 0.5em 0;
       text-align: center;
       font-size: 1.5rem;
@@ -51,6 +56,11 @@
 
     .az-bar a:hover {
       text-decoration: underline;
+    }
+
+    /* Push content down so it doesn't go under fixed header bars */
+    .song-list {
+      padding-top: 120px; /* approx height of banner + A-Z bar */
     }
 
     .song-section {
@@ -77,14 +87,14 @@
 </head>
 <body>
 
-  <!-- Sticky Spotify banner -->
+  <!-- Fixed Spotify banner -->
   <div class="sticky-banner">
     <a href="https://open.spotify.com/playlist/7wpwVCg2XdzCdp1NgI3JUh?si=Ha0AYQdDQ0CmmvQjtWEpZA&pi=wetX9_vdQJicT" target="_blank">
-      <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist">
+      <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist" />
     </a>
   </div>
 
-  <!-- Sticky A–Z bar -->
+  <!-- Fixed A–Z bar -->
   <div class="az-bar">
     <a href="#num">#</a>
     · <a href="#A">A</a>
@@ -169,7 +179,6 @@
       <h2>H</h2>
       <a href="songs/H.html">H</a>
     </div>
-
 
   </div>
 
