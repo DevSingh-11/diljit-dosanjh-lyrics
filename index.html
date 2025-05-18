@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Diljit Dosanjh Songs</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     html {
       scroll-behavior: smooth; /* Enables smooth scrolling */
@@ -12,6 +12,8 @@
     body {
       margin: 0;
       font-family: sans-serif;
+      position: relative;
+      min-height: 100vh;
     }
 
     /* Sticky Spotify banner */
@@ -54,7 +56,7 @@
     }
 
     .song-section {
-      margin-top: 4em;
+      margin-top: 2em;
     }
 
     .song-section h2 {
@@ -68,6 +70,31 @@
       display: block;
       margin: 0.3em 0;
     }
+
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1100;
+      transition: background-color 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #005fa3;
+    }
   </style>
 </head>
 <body>
@@ -75,7 +102,7 @@
   <!-- Sticky Spotify banner -->
   <div class="sticky-banner">
     <a href="https://open.spotify.com/playlist/7wpwVCg2XdzCdp1NgI3JUh?si=Ha0AYQdDQ0CmmvQjtWEpZA&pi=wetX9_vdQJicT" target="_blank">
-      <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist">
+      <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist" />
     </a>
   </div>
 
@@ -112,7 +139,6 @@
 
   <!-- Song list grouped by letter -->
   <div class="song-list">
-
     <div class="song-section" id="num">
       <h2>#</h2>
       <a href="songs/5_Taara.html">5 Taara</a>
@@ -164,8 +190,18 @@
       <h2>H</h2>
       <a href="songs/H.html">H</a>
     </div>
-
   </div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
