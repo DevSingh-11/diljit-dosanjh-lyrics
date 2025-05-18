@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Diljit Dosanjh Songs</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     html {
-      scroll-behavior: smooth; /* Enables smooth scrolling */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -14,17 +14,22 @@
       font-family: sans-serif;
     }
 
-    /* Fixed Spotify banner */
-    .sticky-banner {
+    /* Container for sticky top */
+    .top-fixed {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
+      width: 100%;
       background: white;
-      z-index: 1100;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Spotify banner */
+    .sticky-banner {
       padding: 1em;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      background: white;
     }
 
     .sticky-banner img {
@@ -33,18 +38,14 @@
       border-radius: 12px;
     }
 
-    /* Fixed A–Z bar below the banner */
+    /* A–Z bar */
     .az-bar {
-      position: fixed;
-      top: 72px; /* Adjust this if banner height changes */
-      left: 0;
-      right: 0;
-      background: #f9f9f9;
-      z-index: 1099; /* Just below banner */
       padding: 0.5em 0;
       text-align: center;
       font-size: 1.5rem;
+      border-top: 1px solid #eee;
       border-bottom: 1px solid #ddd;
+      background: #f9f9f9;
     }
 
     .az-bar a {
@@ -58,9 +59,11 @@
       text-decoration: underline;
     }
 
-    /* Push content down so it doesn't go under fixed header bars */
-    .song-list {
-      padding-top: 120px; /* approx height of banner + A-Z bar */
+    /* Content starts after fixed top section */
+    .content {
+      padding-top: 160px; /* height of banner + A–Z bar */
+      padding-left: 1em;
+      padding-right: 1em;
     }
 
     .song-section {
@@ -79,55 +82,54 @@
       margin: 0.3em 0;
     }
 
-    /* Add extra bottom margin to last song link in each section */
+    /* Adjustable space after last song */
     .song-section a:last-of-type {
-      margin-bottom: 3em; /* Larger space after last song */
+      margin-bottom: 3em;
     }
   </style>
 </head>
 <body>
 
-  <!-- Fixed Spotify banner -->
-  <div class="sticky-banner">
-    <a href="https://open.spotify.com/playlist/7wpwVCg2XdzCdp1NgI3JUh?si=Ha0AYQdDQ0CmmvQjtWEpZA&pi=wetX9_vdQJicT" target="_blank">
-      <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist" />
-    </a>
+  <!-- Fixed Top Section -->
+  <div class="top-fixed">
+    <div class="sticky-banner">
+      <a href="https://open.spotify.com/playlist/7wpwVCg2XdzCdp1NgI3JUh?si=Ha0AYQdDQ0CmmvQjtWEpZA&pi=wetX9_vdQJicT" target="_blank">
+        <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist">
+      </a>
+    </div>
+    <div class="az-bar">
+      <a href="#num">#</a>
+      · <a href="#A">A</a>
+      · <a href="#B">B</a>
+      · <a href="#C">C</a>
+      · <a href="#D">D</a>
+      · <a href="#E">E</a>
+      · <a href="#F">F</a>
+      · <a href="#G">G</a>
+      · <a href="#H">H</a>
+      · <a href="#I">I</a>
+      · <a href="#J">J</a>
+      · <a href="#K">K</a>
+      · <a href="#L">L</a>
+      · <a href="#M">M</a>
+      · <a href="#N">N</a>
+      · <a href="#O">O</a>
+      · <a href="#P">P</a>
+      · <a href="#Q">Q</a>
+      · <a href="#R">R</a>
+      · <a href="#S">S</a>
+      · <a href="#T">T</a>
+      · <a href="#U">U</a>
+      · <a href="#V">V</a>
+      · <a href="#W">W</a>
+      · <a href="#X">X</a>
+      · <a href="#Y">Y</a>
+      · <a href="#Z">Z</a>
+    </div>
   </div>
 
-  <!-- Fixed A–Z bar -->
-  <div class="az-bar">
-    <a href="#num">#</a>
-    · <a href="#A">A</a>
-    · <a href="#B">B</a>
-    · <a href="#C">C</a>
-    · <a href="#D">D</a>
-    · <a href="#E">E</a>
-    · <a href="#F">F</a>
-    · <a href="#G">G</a>
-    · <a href="#H">H</a>
-    · <a href="#I">I</a>
-    · <a href="#J">J</a>
-    · <a href="#K">K</a>
-    · <a href="#L">L</a>
-    · <a href="#M">M</a>
-    · <a href="#N">N</a>
-    · <a href="#O">O</a>
-    · <a href="#P">P</a>
-    · <a href="#Q">Q</a>
-    · <a href="#R">R</a>
-    · <a href="#S">S</a>
-    · <a href="#T">T</a>
-    · <a href="#U">U</a>
-    · <a href="#V">V</a>
-    · <a href="#W">W</a>
-    · <a href="#X">X</a>
-    · <a href="#Y">Y</a>
-    · <a href="#Z">Z</a>
-  </div>
-
-  <!-- Song list grouped by letter -->
-  <div class="song-list">
-
+  <!-- Main Content -->
+  <div class="content">
     <div class="song-section" id="num">
       <h2>#</h2>
       <a href="songs/5_Taara.html">5 Taara</a>
@@ -179,7 +181,6 @@
       <h2>H</h2>
       <a href="songs/H.html">H</a>
     </div>
-
   </div>
 
 </body>
