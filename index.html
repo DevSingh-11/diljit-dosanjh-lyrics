@@ -4,6 +4,35 @@
   <meta charset="UTF-8">
   <title>Diljit Dosanjh Songs</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .az-bar {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1.5em 0;
+    }
+    .az-bar a {
+      margin: 0 0.25em;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .az-bar a:hover {
+      text-decoration: underline;
+    }
+    .song-section {
+      margin-top: 2em;
+    }
+    .song-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.2em;
+    }
+    .song-section a {
+      display: block;
+      margin: 0.3em 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,21 +43,74 @@
     </a>
   </div>
 
-  <!-- Song list -->
+  <!-- A–Z bar -->
+  <div class="az-bar">
+    <a href="#num">#</a>
+    · <a href="#A">A</a>
+    · <a href="#B">B</a>
+    · <a href="#C">C</a>
+    · <a href="#D">D</a>
+    · <a href="#E">E</a>
+    · <a href="#F">F</a>
+    · <a href="#G">G</a>
+    · <a href="#H">H</a>
+    · <a href="#I">I</a>
+    · <a href="#J">J</a>
+    · <a href="#K">K</a>
+    · <a href="#L">L</a>
+    · <a href="#M">M</a>
+    · <a href="#N">N</a>
+    · <a href="#O">O</a>
+    · <a href="#P">P</a>
+    · <a href="#Q">Q</a>
+    · <a href="#R">R</a>
+    · <a href="#S">S</a>
+    · <a href="#T">T</a>
+    · <a href="#U">U</a>
+    · <a href="#V">V</a>
+    · <a href="#W">W</a>
+    · <a href="#X">X</a>
+    · <a href="#Y">Y</a>
+    · <a href="#Z">Z</a>
+  </div>
+
+  <!-- Song list grouped by letter -->
   <div class="song-list">
-    <a href="songs/5_Taara.html">5 Taara</a>
-    <a href="songs/Aar_Nanak_Paar_Nanak.html">Aar Nanak Paar Nanak</a>
-    <a href="songs/Akh_Laal_Jatt_Di.html">Akh Laal Jatt Di</a>
-    <a href="songs/Amiri.html">Amiri</a>
-    <a href="songs/Bad_Habits.html">Bad Habits</a>
-    <a href="songs/Born_To_Shine.html">Born To Shine</a>
-    <a href="songs/Case.html">Case</a>
-    <a href="songs/Choli_Ke_Peeche.html">Choli Ke Peeche</a>
-    <a href="songs/Clash.html">Clash</a>
-    <a href="songs/Cry_Later.html">Cry Later</a>
-    <a href="songs/Daytona.html">Daytona</a>
-    <a href="songs/Do_You_Know.html">Do You Know</a>
-    <!-- Add more songs here -->
+
+    <div class="song-section" id="num">
+      <h2>#</h2>
+      <a href="songs/5_Taara.html">5 Taara</a>
+    </div>
+
+    <div class="song-section" id="A">
+      <h2>A</h2>
+      <a href="songs/Aar_Nanak_Paar_Nanak.html">Aar Nanak Paar Nanak</a>
+      <a href="songs/Akh_Laal_Jatt_Di.html">Akh Laal Jatt Di</a>
+      <a href="songs/Amiri.html">Amiri</a>
+    </div>
+
+    <div class="song-section" id="B">
+      <h2>B</h2>
+      <a href="songs/Bad_Habits.html">Bad Habits</a>
+      <a href="songs/Born_To_Shine.html">Born To Shine</a>
+    </div>
+
+    <div class="song-section" id="C">
+      <h2>C</h2>
+      <a href="songs/Case.html">Case</a>
+      <a href="songs/Choli_Ke_Peeche.html">Choli Ke Peeche</a>
+      <a href="songs/Clash.html">Clash</a>
+      <a href="songs/Cry_Later.html">Cry Later</a>
+    </div>
+
+    <div class="song-section" id="D">
+      <h2>D</h2>
+      <a href="songs/Daytona.html">Daytona</a>
+      <a href="songs/Do_You_Know.html">Do You Know</a>
+    </div>
+
+    <!-- Add other sections like E, F, G... when needed -->
+
   </div>
 
 </body>
