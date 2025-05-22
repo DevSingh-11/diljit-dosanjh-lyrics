@@ -26,13 +26,31 @@
       font-size: 1em;
       cursor: pointer;
     }
+
+    /* Optional: make buttons look better in dark mode */
+    body.dark-mode .button-group button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .button-group button:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
+  <script>
+    // Apply dark mode if the user had it on
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
   <h1>SONG</h1>
 
   SPOTIFY LINK
-  
+
   <div class="button-group">
     <button onclick="showLyrics('punjabi')">Punjabi</button>
     <button onclick="showLyrics('romanised')">Romanised</button>
