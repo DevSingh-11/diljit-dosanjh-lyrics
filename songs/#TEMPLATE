@@ -49,7 +49,7 @@
 
   <h1>SONG</h1>
 
-  SPOTIFY LINK
+  SPOTIFY
 
   <div class="button-group">
     <button onclick="showLyrics('punjabi')">Punjabi</button>
