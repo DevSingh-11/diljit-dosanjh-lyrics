@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
 
     body {
@@ -87,7 +87,7 @@
     }
 
     #darkModeToggle {
-      right: 125px; /* 30px (margin) + 85px (button width) + 10px spacing */
+      right: 125px;
     }
 
     #scrollTopBtn img,
@@ -232,9 +232,9 @@
   </button>
 
   <script>
-    // Scroll to top
+    // Scroll to top instantly
     document.getElementById('scrollTopBtn').addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'auto' });
     });
 
     // Dark mode toggle
