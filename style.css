@@ -1,32 +1,48 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --link-color: #333;
+  --link-hover-color: #0077cc;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #bbbbbb;
+  --link-hover-color: #66ccff;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 2em;
-  background: #f9f9f9;
-  color: #222;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Page title */
 h1 {
-  font-size: 4rem; /* Smaller title size */
+  font-size: 4rem;
   text-align: center;
   margin-top: 2rem;
 }
 
 /* Song list links */
 .song-list a {
-  font-size: 3rem; /* Smaller song name size */
+  font-size: 3rem;
   display: block;
   margin: 1rem 0;
   text-decoration: none;
-  color: #333;
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
 
 .song-list a:hover {
-  color: #0077cc;
+  color: var(--link-hover-color);
 }
 
-/* Lyrics: no changes made */
+/* Lyrics */
 #lyrics {
   text-align: left;
   white-space: pre-wrap;
