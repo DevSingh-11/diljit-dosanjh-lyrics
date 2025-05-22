@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SONG - Lyrics</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .lyrics-version {
+      display: none;
+      white-space: pre-wrap;
+      margin-top: 1em;
+    }
 
+    .active {
+      display: block;
+    }
+
+    .button-group {
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    .button-group button {
+      margin: 0 5px;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>SONG</h1>
+
+  SPOTIFY LINK
+  
+  <div class="button-group">
+    <button onclick="showLyrics('punjabi')">Punjabi</button>
+    <button onclick="showLyrics('romanised')">Romanised</button>
+  </div>
+
+  <div id="punjabi" class="lyrics-version">FIRST LINE
+LAST LINE
+  </div>
+
+  <div id="romanised" class="lyrics-version active">FIRST LINE
+LAST LINE
+  </div>
+
+  <p><a href="../index.html">Back to song list</a></p>
+
+  <script>
+    function showLyrics(version) {
+      document.querySelectorAll('.lyrics-version').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(version).classList.add('active');
+    }
+  </script>
+</body>
+</html>
