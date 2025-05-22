@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Ho Gaya Talli - Lyrics</title>
+  <title>SONG - Lyrics</title>
   <link rel="stylesheet" href="../style.css">
   <style>
     .lyrics-version {
@@ -26,13 +26,31 @@
       font-size: 1em;
       cursor: pointer;
     }
+
+    /* Optional: make buttons look better in dark mode */
+    body.dark-mode .button-group button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .button-group button:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
-  <h1>Ho Gaya Talli</h1>
+  <script>
+    // Apply dark mode if the user had it on
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
+  <h1>SONG</h1>
 
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1hJGT1dQ22Cfw3K81U8oUU?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  
+
   <div class="button-group">
     <button onclick="showLyrics('punjabi')">Punjabi</button>
     <button onclick="showLyrics('romanised')">Romanised</button>
@@ -102,7 +120,7 @@
 
 ਮੈਂ ਹੋ ਗਯਾ ਟੱਲੀ 
 ਕੁੜੀਆਂ ਚ ਕੱਲੀ 
-ਨੱਚਦੀ ਨਜ਼ਰ ਮੈਨੂੰ ਆਵੇ 
+ਨੱਚਦੀ ਨਜ਼ਰ ਮੈਨੂੰ ਆਵੇ
   </div>
 
   <div id="romanised" class="lyrics-version active">Main ho gaya talli
