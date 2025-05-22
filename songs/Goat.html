@@ -26,13 +26,31 @@
       font-size: 1em;
       cursor: pointer;
     }
+
+    /* Optional: make buttons look better in dark mode */
+    body.dark-mode .button-group button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .button-group button:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
+  <script>
+    // Apply dark mode if the user had it on
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
   <h1>Goat</h1>
 
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/46QbY78ha62aiu6gBgC7lS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  
+
   <div class="button-group">
     <button onclick="showLyrics('punjabi')">Punjabi</button>
     <button onclick="showLyrics('romanised')">Romanised</button>
@@ -107,7 +125,8 @@ Dollar ਚ ਅੱਸੀ ਕੁ ਹਾਜ਼ਰ ਗੋਰੀਏ
 ਛਾਂ ਛਾਂ ਅੱਖ ਕੇ ਬੁਲਾਇਆ ਕਰ ਤੂੰ 
 ਲੋਕ ਭਾਵੈਂ ਕਹਿੰਦੇ ਨੇ star ਗੋਰੀਏ 
 ਗਬਰੂ ਤਾਂ ਵੈਰੀ ਨਾਲ ਵੀ ਮੀਠਾ ਬੋਲਦਾ 
-ਤੂੰ ਤਾਂ ਜੱਟ ਦਾ ਪਿਆਰ ਗੋਰੀਏ   
+ਤੂੰ ਤਾਂ ਜੱਟ ਦਾ ਪਿਆਰ ਗੋਰੀਏ
+
   </div>
 
   <div id="romanised" class="lyrics-version active">Diamond an de naal tol da
