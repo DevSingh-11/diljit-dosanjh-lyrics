@@ -26,13 +26,31 @@
       font-size: 1em;
       cursor: pointer;
     }
+
+    /* Optional: make buttons look better in dark mode */
+    body.dark-mode .button-group button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .button-group button:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
+  <script>
+    // Apply dark mode if the user had it on
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
   <h1>Daytona</h1>
 
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/45FFMb6wv36U1xduNY6TyO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  
+
   <div class="button-group">
     <button onclick="showLyrics('punjabi')">Punjabi</button>
     <button onclick="showLyrics('romanised')">Romanised</button>
@@ -129,7 +147,7 @@ Devil ਕਿਸੇ ਲਈ ਕਿਥੇ ਰਬ ਆਂ
 ਗੱਲ ਸੁਨ ਜੱਟ ਦੀ brief ਚ ਕੁੜੇ 
 ਪਿਆਰ ਜਿੰਨਾ ਨਸ਼ਾ ਹੁੰਦਾ beef ਚ ਕੁੜੇ 
 ਓਹਨਾ ਕਾਠ ਲੋਕਾਂ ਦੇ ਵਿਆਹ ਚ ਹੁੰਦਾ ਨੀ 
-ਜਿੰਨਾ ਕਾਠ ਬੋਰਡਾਂ ਤਾਰੀਖ ਤੇ ਕੁੜੇ  
+ਜਿੰਨਾ ਕਾਠ ਬੋਰਡਾਂ ਤਾਰੀਖ ਤੇ ਕੁੜੇ
   </div>
 
   <div id="romanised" class="lyrics-version active">Ho gal sun jatt di brief ch kude
