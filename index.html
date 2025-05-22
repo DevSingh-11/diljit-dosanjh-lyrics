@@ -5,10 +5,14 @@
   <title>Diljit Dosanjh Songs</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Removed smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: sans-serif;
+      transition: background 0.3s, color 0.3s;
     }
 
     /* Sticky Spotify banner */
@@ -51,15 +55,10 @@
     }
 
     .song-section {
-      margin-top: 0;
-    }
-
-    .song-section {
       scroll-margin-top: 275px;
       margin-top: 1em;
     }
 
-    
     .section-divider {
       border-bottom: 2px solid #ddd;
       margin: 1em 0;
@@ -71,10 +70,9 @@
     }
 
     /* Scroll to top button styles */
-    #scrollTopBtn {
+    #scrollTopBtn, #darkModeToggle {
       position: fixed;
       bottom: 30px;
-      right: 30px;
       width: 85px;
       height: 85px;
       background: transparent;
@@ -84,10 +82,46 @@
       padding: 0;
     }
 
-    #scrollTopBtn img {
+    #scrollTopBtn {
+      right: 30px;
+    }
+
+    #darkModeToggle {
+      right: 125px; /* 30px (margin) + 85px (button width) + 10px spacing */
+    }
+
+    #scrollTopBtn img,
+    #darkModeToggle img {
       width: 100%;
       height: 100%;
       display: block;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background: #111;
+      color: #fff;
+    }
+
+    body.dark-mode .sticky-banner {
+      background: #222;
+    }
+
+    body.dark-mode .az-bar {
+      background: #222;
+      border-bottom: 1px solid #555;
+    }
+
+    body.dark-mode .az-bar a {
+      color: #66ccff;
+    }
+
+    body.dark-mode .section-divider {
+      border-color: #444;
+    }
+
+    body.dark-mode a {
+      color: #66ccff;
     }
   </style>
 </head>
@@ -102,7 +136,7 @@
 
   <!-- Sticky A–Z bar -->
   <div class="az-bar">
-    <a href="#">#</a>
+    <a href="#num">#</a>
     · <a href="#A">A</a>
     · <a href="#B">B</a>
     · <a href="#C">C</a>
@@ -192,10 +226,40 @@
     <img src="back-to-top.png" alt="Up arrow">
   </button>
 
+  <!-- Dark mode toggle button -->
+  <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <img id="modeIcon" src="moon.png" alt="Toggle dark mode">
+  </button>
+
   <script>
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
+    // Scroll to top
+    document.getElementById('scrollTopBtn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Dark mode toggle
+    const body = document.body;
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const modeIcon = document.getElementById('modeIcon');
+
+    function setMode(mode) {
+      if (mode === 'dark') {
+        body.classList.add('dark-mode');
+        modeIcon.src = 'sun.png';
+      } else {
+        body.classList.remove('dark-mode');
+        modeIcon.src = 'moon.png';
+      }
+      localStorage.setItem('theme', mode);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setMode(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark-mode');
+      setMode(isDark ? 'light' : 'dark');
     });
   </script>
 
