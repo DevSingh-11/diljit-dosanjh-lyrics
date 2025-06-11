@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Icon - Lyrics</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .lyrics-version {
+      display: none;
+      white-space: pre-wrap;
+      margin-top: 1em;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .button-group {
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    .button-group button {
+      margin: 0 5px;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    /* Optional: make buttons look better in dark mode */
+    body.dark-mode .button-group button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .button-group button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Apply dark mode if the user had it on
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
+  <h1>Icon</h1>
+
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4OmhUrKAKTBxdvscSfx1gp?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <div class="button-group">
+    <button onclick="showLyrics('punjabi')">Punjabi</button>
+    <button onclick="showLyrics('romanised')">Romanised</button>
+  </div>
+
+  <div id="punjabi" class="lyrics-version">Richard Mille ਆ Nike ਦੇ check ਨੀ
+ਚੱਲ ਨਹੀਂ ਹੁੰਦੀ ਐ ਜੱਟ ਦੀ flex ਨੀ
+Daytona bust down ਮਹਿੰਗੀ Rolex ਨੀ
+ਉਹ ਖੇਡਾ checkers ਤੇ ਮੈਂ ਖੇਡਾਂ chess
+
+
+Top ਉੱਤੇ ਬੈਠਾ ਦੇਖ ਯਾਰ
+ਬਾਜ ਰਹਿੰਦਾ ਮੂਹਰੇ ਪਿੱਛੇ ਤਿੱਤਰਾਂ ਦੀ ਡਾਰ
+ਮਿਹਨਤਾਂ ਨੂੰ ਕਰਦੇ ਨੀ ਹੋਗੇ ਕਿੰਨੇ ਸਾਲ
+ਵੈਰੀਆਂ ਦਾ tension ਚ ਹੋਇਆ ਬੁਰਾ ਹਾਲ
+
+
+ਜਾਵਾਂ casino ਚ ਲੱਖਾਂ ਦੀ bet ਨੀ
+ਨਿੱਤ ਨਵਾਂ ਥੱਲੇ ਹੁੰਦਾ ਆ jet ਨੀ
+Bread ਤੇ diamond ਦੋਵੇਂ baguette ਨੀ
+ਜ਼ਿੰਦਗੀ ਨਾ ਖੇਡਾਂ Russian roulette
+
+
+Double R ਵਿੱਚ ਹੁੰਦੇ ਆਂ ਸਵਾਰ
+Location ਨਾ ਪਤਾ ਲੱਗੇ ਮਿੰਟਾ ਚ ਫ਼ਰਾਰ
+ਕਦੇ ਬਿੱਲੋ ਪਿੰਡ ਕਦੇ ਹੁੰਦਾ ਆਂ Qatar
+ਰੌਣਕ ਆ ਲੱਗੇ ਜਿੱਥੇ ਬੈਠੇ ਸਰਦਾਰ
+
+
+ਅੱਖ ਦੇ ਨਿਸ਼ਾਨੇ ਦੀ ਆ ਦੂਰ ਤਕ ਮਾਰ
+BK ਧਾਲੀਵਾਲ ਜਿਹਾ ਲੱਭਣਾ ਨੀ ਯਾਰ
+
+
+Richard Mille ਆ Nike ਦੇ check ਨੀ
+ਚੱਲ ਨਹੀਂ ਹੁੰਦੀ ਐ ਜੱਟ ਦੀ flex ਨੀ
+Daytona bust down ਮਹਿੰਗੀ Rolex ਨੀ
+ਉਹ ਖੇਡਾ checkers ਤੇ ਮੈਂ ਖੇਡਾਂ chess
+  </div>
+
+  <div id="romanised" class="lyrics-version active">Richard Mille aa Nike de check ni
+Chal ni hundi aa jatt di flex ni
+Daytona bustdown mehengi rolex ni
+O khede checkers te main kheda chess
+
+
+Top utte betha dekh yaar
+Baaj rehenda mure piche tittara di daar
+Mehenta nu karte ni hoge kinne saal
+Vairiya da tension ch hoya bura haal
+
+
+Jawa casino ch lakha di bet ni
+Nit nawa thalle hunda aa jet ni
+Bread te diamond dove baguette ni
+Zindagi na khela russian roulette
+
+
+Double R vich hunde aa sawar
+Location na pata lage minta ch farar
+Kade billo pind kade hunna ya Qatar
+Ronak ya lage jith bethe sardar
+
+
+Akh de nishaane diya door tak maar
+BK Dhaliwal jeha labhna ni yaar
+
+
+Richard Mille aa Nike de check ni
+Chal ni hundi aa jatt di flex ni
+Daytona bustdown mehengi rolex ni
+O khede checkers te main kheda chess
+  </div>
+
+  <p><a href="../index.html">Back to song list</a></p>
+
+  <script>
+    function showLyrics(version) {
+      document.querySelectorAll('.lyrics-version').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(version).classList.add('active');
+    }
+  </script>
+</body>
+</html>
