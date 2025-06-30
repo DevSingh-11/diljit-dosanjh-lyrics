@@ -15,7 +15,7 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    /* Spotify banner (not sticky anymore) */
+    /* Spotify banner */
     .sticky-banner {
       background: white;
       padding: 0;
@@ -51,8 +51,9 @@
       text-decoration: underline;
     }
 
+    /* Anchor section fix */
     .song-section {
-      scroll-margin-top: 275px;
+      scroll-margin-top: 80px; /* Adjust this to match sticky bar height */
       margin-top: 1em;
     }
 
@@ -66,7 +67,7 @@
       margin: 0.3em 0;
     }
 
-    /* Scroll to top button styles */
+    /* Scroll to top & dark mode buttons */
     #scrollTopBtn, #darkModeToggle {
       position: fixed;
       bottom: 30px;
@@ -94,7 +95,7 @@
       display: block;
     }
 
-    /* Dark mode styles */
+    /* Dark mode */
     body.dark-mode {
       background: #111;
       color: #fff;
@@ -124,14 +125,14 @@
 </head>
 <body>
 
-  <!-- Spotify banner (no longer sticky) -->
+  <!-- Spotify banner -->
   <div class="sticky-banner">
     <a href="https://open.spotify.com/playlist/7wpwVCg2XdzCdp1NgI3JUh?si=Ha0AYQdDQ0CmmvQjtWEpZA&pi=wetX9_vdQJicT" target="_blank">
       <img src="spotify-banner.png" alt="Diljit Dosanjh Spotify Playlist">
     </a>
   </div>
 
-  <!-- Sticky A–Z bar -->
+  <!-- A–Z Navigation -->
   <div class="az-bar">
     <a href="#num">#</a>
     · <a href="#A">A</a>
@@ -162,9 +163,8 @@
     · <a href="#Z">Z</a>
   </div>
 
-  <!-- Song list grouped by letter -->
+  <!-- Song sections -->
   <div class="song-list">
-
     <div class="song-section" id="num">
       <div class="section-divider"></div>
       <a href="songs/5_Taara.html">5 Taara</a>
@@ -225,21 +225,20 @@
       <div class="section-divider"></div>
       <a href="songs/Icon.html">Icon</a>
     </div>
-
   </div>
 
-  <!-- Scroll to top button -->
+  <!-- Scroll to top -->
   <button id="scrollTopBtn" aria-label="Scroll to top" title="Back to top">
     <img src="back-to-top.png" alt="Up arrow">
   </button>
 
-  <!-- Dark mode toggle button -->
+  <!-- Dark mode toggle -->
   <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
     <img id="modeIcon" src="moon.png" alt="Toggle dark mode">
   </button>
 
   <script>
-    // Scroll to top instantly
+    // Scroll to top
     document.getElementById('scrollTopBtn').addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'auto' });
     });
@@ -260,7 +259,6 @@
       localStorage.setItem('theme', mode);
     }
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     setMode(savedTheme);
 
